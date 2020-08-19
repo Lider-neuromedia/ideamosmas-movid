@@ -1,0 +1,567 @@
+<section class="container-cuenta">
+    <div class="container pt-5">
+        <div class="row">
+            <div class="col-sm-3">
+                <app-sidebar></app-sidebar>
+            </div>
+            <div class="col-sm">
+                <div class="pb-0">
+                    <div class="card card-cuenta">
+                        <div class="card-body datos-personales">
+                            <div class="row pl-3 pr-3">
+                                <p class="m-0">menu</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card card-cuenta mt-5">
+                        <div class="card-body datos-personales">
+                            <div class="pl-2 pr-2">
+                                <h3 class="text-red2">Ofrece tu parqueadero</h3>
+                                <ul class="ul-style1">
+                                    <li>
+                                        <span>Ubicación del parqueadero</span>
+                                    </li>
+                                </ul>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" (keydown.enter)="$event.preventDefault()" placeholder="Dirección" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" #search>
+                                </div>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.922030844449!2d-76.52970738474816!3d3.3692356526985945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a17491d2a5f9%3A0xf06c44da2d3c8a74!2sCentro%20Comercial%20Jard%C3%ADn%20Plaza!5e0!3m2!1ses!2sco!4v1596231158516!5m2!1ses!2sco"
+                                    width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <form action="prueba.php" method="post">
+                        <div class="card card-cuenta mt-5 pb-2">
+                            <div class="card-body datos-personales ">
+                                <div class="pl-2 pr-2">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <h5 class="text-red2">Características del parqueadero</h5>
+                                            <p class="pt-4 m-0"><b>Tipo de parqueadero</b></p>
+                                            <div class="form-check form-check-inline check-red-rounded pt-3">
+                                                <input class="form-check-input" type="checkbox" id="publico" value="option1">
+                                                <label class="form-check-label" for="publico"><img src="./assets/img/cuenta/parking-icon-p.svg"> Público</label>
+                                            </div>
+                                            <div class="form-check form-check-inline check-red-rounded pt-3">
+                                                <input class="form-check-input" type="checkbox" id="privado" value="option1">
+                                                <label class="form-check-label" for="privado"><img src="./assets/img/cuenta/parking-icon-p.svg"> Privado</label>
+                                            </div>
+                                            <p class="pt-4 m-0"><b>Tipo de reserva</b></p>
+                                            <div class="form-check form-check-inline check-red-rounded pt-3">
+                                                <input class="form-check-input" type="checkbox" id="horas" value="option1">
+                                                <label class="form-check-label" for="horas"><img src="./assets/img/cuenta/parking-icon-p.svg"> Horas</label>
+                                            </div>
+                                            <div class="form-check form-check-inline check-red-rounded pt-3">
+                                                <input class="form-check-input" type="checkbox" id="dias" value="option1">
+                                                <label class="form-check-label" for="dias"><img src="./assets/img/cuenta/parking-icon-p.svg"> Días</label>
+                                            </div>
+                                            <div class="form-check form-check-inline check-red-rounded pt-3">
+                                                <input class="form-check-input" type="checkbox" id="meses" value="option1">
+                                                <label class="form-check-label" for="meses"><img src="./assets/img/cuenta/parking-icon-p.svg"> Meses</label>
+                                            </div>
+                                            <p class="pt-4 m-0"><b>Comodidades</b></p>
+                                            <div class="form-check form-check-inline check-red-rounded pt-3">
+                                                <input class="form-check-input" type="checkbox" id="rampas" value="option1">
+                                                <label class="form-check-label" for="rampas"><img src="./assets/img/cuenta/parking-icon-p.svg"> Rampas de acceso</label>
+                                            </div>
+                                            <div class="form-check form-check-inline check-red-rounded pt-3">
+                                                <input class="form-check-input" type="checkbox" id="cubierto" value="option1">
+                                                <label class="form-check-label" for="cubierto"><img src="./assets/img/cuenta/parking-icon-p.svg"> Cubierto</label>
+                                            </div>
+                                            <div class="form-check form-check-inline check-red-rounded pt-3">
+                                                <input class="form-check-input" type="checkbox" id="pavimento" value="option1">
+                                                <label class="form-check-label" for="pavimento"><img src="./assets/img/cuenta/parking-icon-p.svg"> Pavimentado</label>
+                                            </div>
+                                            <div class="form-check form-check-inline check-red-rounded pt-3">
+                                                <input class="form-check-input" type="checkbox" id="circuito" value="option1">
+                                                <label class="form-check-label" for="circuito"><img src="./assets/img/cuenta/parking-icon-p.svg"> Circuito cerrado</label>
+                                            </div>
+                                            <div class="form-check form-check-inline check-red-rounded pt-3">
+                                                <input class="form-check-input" type="checkbox" id="valet" value="option1">
+                                                <label class="form-check-label" for="valet"><img src="./assets/img/cuenta/parking-icon-p.svg"> Valet parking</label>
+                                            </div>
+                                            <div class="form-check form-check-inline check-red-rounded pt-3">
+                                                <input class="form-check-input" type="checkbox" id="vigilancia" value="option1">
+                                                <label class="form-check-label" for="vigilancia"><img src="./assets/img/cuenta/parking-icon-p.svg"> Vigilancia</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <h5 class="text-red2">¿En donde está tu parqueadero?</h5>
+                                            <div class="form-group">
+                                                <label for="nombre_edificio">Nombre del edificio</label>
+                                                <input type="text" class="form-control" id="nombre_edificio" placeholder="Ejemplo: torre de cali">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="numero_apartamento">Número de apartamento u oficina</label>
+                                                <input type="text" class="form-control" id="numero_apartamento" placeholder="Ejemplo: 202">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="nota">Nota:</label>
+                                                <textarea type="text" class="form-control" id="nota" placeholder="Tienes declaraciones que consideres pertinentes?"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card card-cuenta mt-5">
+                            <div class="card-body datos-personales">
+                                <div class="pl-2 pr-2">
+                                    <h3 class="text-red2">Disponibilidad</h3>
+                                    <ul class="ul-style1">
+                                        <li>
+                                            <span>Elije el horario de disponibilidad</span>
+                                        </li>
+                                    </ul>
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <div class="form-check form-check-inline check-red-rounded pt-3">
+                                                <input class="form-check-input" type="checkbox" id="disponibilidad247" value="option1">
+                                                <label class="form-check-label" for="disponibilidad247"><img src="./assets/img/cuenta/parking-icon-p.svg"> Disponibilidad 24/7</label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="form-check form-check-inline pt-3">
+                                                <input class="form-check-input" type="checkbox" id="disponibilidad247" value="option1">
+                                                <label class="form-check-label" for="disponibilidad247">LUNES</label>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group col-sm-6 input-gray">
+                                                    <label class="m-0" for="lunes-apertura">Apertura</label>
+                                                    <input type="time" class="form-control" id="lunes-apertura" placeholder="Tienes declaraciones que consideres pertinentes?">
+                                                </div>
+                                                <div class="form-group col-sm-6 input-gray">
+                                                    <label class="m-0" for="lunes-cierre">Cierre</label>
+                                                    <input type="time" class="form-control" id="lunes-cierre" placeholder="Tienes declaraciones que consideres pertinentes?">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="form-check form-check-inline pt-3">
+                                                <input class="form-check-input" type="checkbox" id="disponibilidad247" value="option1">
+                                                <label class="form-check-label" for="disponibilidad247">MARTES</label>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group col-sm-6 input-gray">
+                                                    <label class="m-0" for="martes-apertura">Apertura</label>
+                                                    <input type="time" class="form-control" id="martes-apertura" placeholder="Tienes declaraciones que consideres pertinentes?">
+                                                </div>
+                                                <div class="form-group col-sm-6 input-gray">
+                                                    <label class="m-0" for="martes-cierre">Cierre</label>
+                                                    <input type="time" class="form-control" id="martes-cierre" placeholder="Tienes declaraciones que consideres pertinentes?">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <div class="form-check form-check-inline pt-3">
+                                                <input class="form-check-input" type="checkbox" id="disponibilidad247" value="option1">
+                                                <label class="form-check-label" for="disponibilidad247">MIERCOLES</label>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group col-sm-6 input-gray">
+                                                    <label class="m-0" for="miercoles-apertura">Apertura</label>
+                                                    <input type="time" class="form-control" id="miercoles-apertura" placeholder="Tienes declaraciones que consideres pertinentes?">
+                                                </div>
+                                                <div class="form-group col-sm-6 input-gray">
+                                                    <label class="m-0" for="miercoles-cierre">Cierre</label>
+                                                    <input type="time" class="form-control" id="miercoles-cierre" placeholder="Tienes declaraciones que consideres pertinentes?">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="form-check form-check-inline pt-3">
+                                                <input class="form-check-input" type="checkbox" id="disponibilidad247" value="option1">
+                                                <label class="form-check-label" for="disponibilidad247">JUEVES</label>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group col-sm-6 input-gray">
+                                                    <label class="m-0" for="jueves-apertura">Apertura</label>
+                                                    <input type="time" class="form-control" id="jueves-apertura" placeholder="Tienes declaraciones que consideres pertinentes?">
+                                                </div>
+                                                <div class="form-group col-sm-6 input-gray">
+                                                    <label class="m-0" for="jueves-cierre">Cierre</label>
+                                                    <input type="time" class="form-control" id="jueves-cierre" placeholder="Tienes declaraciones que consideres pertinentes?">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="form-check form-check-inline pt-3">
+                                                <input class="form-check-input" type="checkbox" id="disponibilidad247" value="option1">
+                                                <label class="form-check-label" for="disponibilidad247">VIERNES</label>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group col-sm-6 input-gray">
+                                                    <label class="m-0" for="viernes-apertura">Apertura</label>
+                                                    <input type="time" class="form-control" id="viernes-apertura" placeholder="Tienes declaraciones que consideres pertinentes?">
+                                                </div>
+                                                <div class="form-group col-sm-6 input-gray">
+                                                    <label class="m-0" for="viernes-cierre">Cierre</label>
+                                                    <input type="time" class="form-control" id="viernes-cierre" placeholder="Tienes declaraciones que consideres pertinentes?">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <div class="form-check form-check-inline pt-3">
+                                                <input class="form-check-input" type="checkbox" id="disponibilidad247" value="option1">
+                                                <label class="form-check-label" for="disponibilidad247">SÁBADO</label>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group col-sm-6 input-gray">
+                                                    <label class="m-0" for="sabado-apertura">Apertura</label>
+                                                    <input type="time" class="form-control" id="sabado-apertura" placeholder="Tienes declaraciones que consideres pertinentes?">
+                                                </div>
+                                                <div class="form-group col-sm-6 input-gray">
+                                                    <label class="m-0" for="sabado-cierre">Cierre</label>
+                                                    <input type="time" class="form-control" id="sabado-cierre" placeholder="Tienes declaraciones que consideres pertinentes?">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="form-check form-check-inline pt-3">
+                                                <input class="form-check-input" type="checkbox" id="disponibilidad247" value="option1">
+                                                <label class="form-check-label" for="disponibilidad247">DOMINGO</label>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group col-sm-6 input-gray">
+                                                    <label class="m-0" for="domingo-apertura">Apertura</label>
+                                                    <input type="time" class="form-control" id="domingo-apertura" placeholder="Tienes declaraciones que consideres pertinentes?">
+                                                </div>
+                                                <div class="form-group col-sm-6 input-gray">
+                                                    <label class="m-0" for="domingo-cierre">Cierre</label>
+                                                    <input type="time" class="form-control" id="domingo-cierre" placeholder="Tienes declaraciones que consideres pertinentes?">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="form-check form-check-inline pt-3">
+                                                <input class="form-check-input" type="checkbox" id="disponibilidad247" value="option1">
+                                                <label class="form-check-label" for="disponibilidad247">FESTIVO</label>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group col-sm-6 input-gray">
+                                                    <label class="m-0" for="festivo-apertura">Apertura</label>
+                                                    <input type="time" class="form-control" id="festivo-apertura" placeholder="Tienes declaraciones que consideres pertinentes?">
+                                                </div>
+                                                <div class="form-group col-sm-6 input-gray">
+                                                    <label class="m-0" for="festivo-cierre">Cierre</label>
+                                                    <input type="time" class="form-control" id="festivo-cierre" placeholder="Tienes declaraciones que consideres pertinentes?">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card card-cuenta mt-5">
+                            <div class="card-body datos-personales">
+                                <div class="pl-2 pr-2">
+                                    <h3 class="text-red2">Vehículos</h3>
+                                    <ul class="ul-style1">
+                                        <li>
+                                            <span>Tipo de vehículo que puedes admitir en tu parqueadero</span>
+                                        </li>
+                                    </ul>
+                                    <div class="form-row pt-1">
+                                        <div class="col">
+                                            <div class="form-check form-check-inline check-red-rounded ">
+                                                <input class="form-check-input" type="checkbox" id="car1" value="option1">
+                                                <label class="form-check-label" for="car1"><img src="./assets/img/cuenta/parking-icon-p.svg"> Vigilancia</label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="input-gray form-control-custom1">
+                                                <select class="form-control" id="car1-cupos" required>
+                                                    <option>0</option>
+                                                    <option>1</option>
+                                                </select>
+                                                <label for="car1-cupos">NÚMERO DE CUPOS</label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="input-gray form-control-custom1">
+                                                <input type="number" class="form-control" id="car1-hora" required>
+                                                <label for="car1-hora">VALOR HORA</label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="input-gray form-control-custom1">
+                                                <input type="number" class="form-control" id="car1-dia" required>
+                                                <label for="car1-dia">VALOR DÍA</label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="input-gray form-control-custom1">
+                                                <input type="number" class="form-control" id="car1-mes" required>
+                                                <label for="car1-mes">MENSUALIDAD</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row pt-1">
+                                        <div class="col">
+                                            <div class="form-check form-check-inline check-red-rounded ">
+                                                <input class="form-check-input" type="checkbox" id="car2" value="option1">
+                                                <label class="form-check-label" for="car2"><img src="./assets/img/cuenta/parking-icon-p.svg"> Vigilancia</label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="input-gray form-control-custom1">
+                                                <select class="form-control" id="car2-cupos" required>
+                                                    <option>0</option>
+                                                    <option>1</option>
+                                                </select>
+                                                <label for="car2-cupos">NÚMERO DE CUPOS</label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="input-gray form-control-custom1">
+                                                <input type="number" class="form-control" id="car2-hora" required>
+                                                <label for="car2-hora">VALOR HORA</label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="input-gray form-control-custom1">
+                                                <input type="number" class="form-control" id="car2-dia" required>
+                                                <label for="car2-dia">VALOR DÍA</label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="input-gray form-control-custom1">
+                                                <input type="number" class="form-control" id="car2-mes" required>
+                                                <label for="car2-mes">MENSUALIDAD</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row pt-1">
+                                        <div class="col">
+                                            <div class="form-check form-check-inline check-red-rounded ">
+                                                <input class="form-check-input" type="checkbox" id="car3" value="option1">
+                                                <label class="form-check-label" for="car3"><img src="./assets/img/cuenta/parking-icon-p.svg"> Vigilancia</label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="input-gray form-control-custom1">
+                                                <select class="form-control" id="car3-cupos" required>
+                                                    <option>0</option>
+                                                    <option>1</option>
+                                                </select>
+                                                <label for="car3-cupos">NÚMERO DE CUPOS</label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="input-gray form-control-custom1">
+                                                <input type="number" class="form-control" id="car3-hora" required>
+                                                <label for="car3-hora">VALOR HORA</label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="input-gray form-control-custom1">
+                                                <input type="number" class="form-control" id="car3-dia" required>
+                                                <label for="car3-dia">VALOR DÍA</label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="input-gray form-control-custom1">
+                                                <input type="number" class="form-control" id="car3-mes" required>
+                                                <label for="car3-mes">MENSUALIDAD</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row pt-1">
+                                        <div class="col">
+                                            <div class="form-check form-check-inline check-red-rounded ">
+                                                <input class="form-check-input" type="checkbox" id="car4" value="option1">
+                                                <label class="form-check-label" for="car4"><img src="./assets/img/cuenta/parking-icon-p.svg"> Vigilancia</label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="input-gray form-control-custom1">
+                                                <select class="form-control" id="car4-cupos" required>
+                                                    <option>0</option>
+                                                    <option>1</option>
+                                                </select>
+                                                <label for="car4-cupos">NÚMERO DE CUPOS</label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="input-gray form-control-custom1">
+                                                <input type="number" class="form-control" id="car4-hora" required>
+                                                <label for="car4-hora">VALOR HORA</label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="input-gray form-control-custom1">
+                                                <input type="number" class="form-control" id="car4-dia" required>
+                                                <label for="car4-dia">VALOR DÍA</label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="input-gray form-control-custom1">
+                                                <input type="number" class="form-control" id="car4-mes" required>
+                                                <label for="car4-mes">MENSUALIDAD</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row pt-1">
+                                        <div class="col">
+                                            <div class="form-check form-check-inline check-red-rounded ">
+                                                <input class="form-check-input" type="checkbox" id="car5" value="option1">
+                                                <label class="form-check-label" for="car5"><img src="./assets/img/cuenta/parking-icon-p.svg"> Vigilancia</label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="input-gray form-control-custom1">
+                                                <select class="form-control" id="car5-cupos" required>
+                                                    <option>0</option>
+                                                    <option>1</option>
+                                                </select>
+                                                <label for="car5-cupos">NÚMERO DE CUPOS</label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="input-gray form-control-custom1">
+                                                <input type="number" class="form-control" id="car5-hora" required>
+                                                <label for="car5-hora">VALOR HORA</label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="input-gray form-control-custom1">
+                                                <input type="number" class="form-control" id="car5-dia" required>
+                                                <label for="car5-dia">VALOR DÍA</label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="input-gray form-control-custom1">
+                                                <input type="number" class="form-control" id="car5-mes" required>
+                                                <label for="car5-mes">MENSUALIDAD</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row pt-1">
+                                        <div class="col">
+                                            <div class="form-check form-check-inline check-red-rounded ">
+                                                <input class="form-check-input" type="checkbox" id="car6" value="option1">
+                                                <label class="form-check-label" for="car6"><img src="./assets/img/cuenta/parking-icon-p.svg"> Vigilancia</label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="input-gray form-control-custom1">
+                                                <select class="form-control" id="car6-cupos" required>
+                                                    <option>0</option>
+                                                    <option>1</option>
+                                                </select>
+                                                <label for="car6-cupos">NÚMERO DE CUPOS</label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="input-gray form-control-custom1">
+                                                <input type="number" class="form-control" id="car6-hora" required>
+                                                <label for="car6-hora">VALOR HORA</label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="input-gray form-control-custom1">
+                                                <input type="number" class="form-control" id="car6-dia" required>
+                                                <label for="car6-dia">VALOR DÍA</label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="input-gray form-control-custom1">
+                                                <input type="number" class="form-control" id="car6-mes" required>
+                                                <label for="car6-mes">MENSUALIDAD</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row pt-1">
+                                        <div class="col">
+                                            <div class="form-check form-check-inline check-red-rounded ">
+                                                <input class="form-check-input" type="checkbox" id="car7" value="option1">
+                                                <label class="form-check-label" for="car7"><img src="./assets/img/cuenta/parking-icon-p.svg"> Vigilancia</label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="input-gray form-control-custom1">
+                                                <select class="form-control" id="car7-cupos" required>
+                                                    <option>0</option>
+                                                    <option>1</option>
+                                                </select>
+                                                <label for="car7-cupos">NÚMERO DE CUPOS</label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="input-gray form-control-custom1">
+                                                <input type="number" class="form-control" id="car7-hora" required>
+                                                <label for="car7-hora">VALOR HORA</label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="input-gray form-control-custom1">
+                                                <input type="number" class="form-control" id="car7-dia" required>
+                                                <label for="car7-dia">VALOR DÍA</label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="input-gray form-control-custom1">
+                                                <input type="number" class="form-control" id="car7-mes" required>
+                                                <label for="car7-mes">MENSUALIDAD</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card card-cuenta mt-5">
+                            <div class="card-body datos-personales">
+                                <div class="pl-2 pr-2">
+                                    <h3 class="text-red2">Descripción</h3>
+                                    <ul class="ul-style1">
+                                        <li>
+                                            <span>Describe tu parqueadero en 120 caractéres</span>
+                                        </li>
+                                    </ul>
+                                    <div class="form-row pt-1">
+                                        <div class="col">
+                                            <div class="input-gray">
+                                                <textarea type="text" class="form-control" cols="40" rows="4" id="descripcion" placeholder="Ejemplo: Cómo parqueadero al lado de centros comerciales y vías principales." required></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card card-cuenta mt-5">
+                            <div class="card-body datos-personales">
+                                <div class="pl-2 pr-2">
+                                    <h3 class="text-red2">Galería de imágenes</h3>
+                                    <ul class="ul-style1">
+                                        <li>
+                                            <span>Incluye imágenes de tu parqueadero para hacerlo más atractivo para las personas que están buscando.</span>
+                                        </li>
+                                    </ul>
+                                    <div class="form-row pt-1">
+                                        <div class="col">
+                                            <div class="input-gray">
+                                                <form action="prueba.php" method="post" enctype="multipart/form-data" class="dropzone" id="dropzoneForm">
+                                                    <div class="fallback">
+                                                        <input type="file" name="file" id="galeria" multiple />
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-center mt-5 mb-5">
+                            <button type="submit" class="btn btn-red">Realizar solicitud</button>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

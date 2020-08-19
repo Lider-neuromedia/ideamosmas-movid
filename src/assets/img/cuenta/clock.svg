@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+    <title>clicons/principa</title>
+    <desc>Created with Sketch.</desc>
+    <g id="PROTOTIPO" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="MI-cuenta/CREAR-PARQUEADERO-PUBLICO" transform="translate(-477.000000, -1085.000000)" fill="#A4A4A4">
+            <g id="cl-copy-2" transform="translate(485.000000, 1093.000000) rotate(-360.000000) translate(-485.000000, -1093.000000) translate(477.000000, 1085.000000)">
+                <g id="clock-(2)">
+                    <path d="M8,0 C3.58887781,0 0,3.58887781 0,8 C0,12.4111222 3.58887781,16 8,16 C12.4111222,16 16,12.4111222 16,8 C16,3.58887781 12.4111222,0 8,0 Z M8.00000451,15.0000045 C4.14013273,15.0000045 1.00000451,11.8598673 1.00000451,8.00000451 C1.00000451,4.14013273 4.14013273,1.00000451 8.00000451,1.00000451 C11.8598673,1.00000451 15.0000045,4.14013273 15.0000045,8.00000451 C15.0000045,11.8598673 11.8598673,15.0000045 8.00000451,15.0000045 Z" id="Shape" fill-rule="nonzero"></path>
+                    <polygon id="Path" fill-rule="nonzero" points="8.32740644 2.85090909 7.33090909 2.85090909 7.33090909 8.03704638 10.4663546 11.1709091 11.1709091 10.4667103 8.32740644 7.62464304"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

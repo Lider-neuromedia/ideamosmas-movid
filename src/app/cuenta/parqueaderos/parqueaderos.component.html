@@ -1,0 +1,47 @@
+<app-navbar></app-navbar>
+<section class="container-cuenta">
+    <div class="container pt-5">
+        <div class="row">
+            <div class="col-sm-3">
+                <app-sidebar></app-sidebar>
+            </div>
+            <div class="col-sm">
+                <div class="card card-cuenta">
+                    <div class="card-body">
+                        <div class="row justify-content-between pt-3 pb-3 pl-3 pr-3">
+                            <h4 class="title-red m-0">Mis parqueaderos</h4>
+                            <span class="create-plus text-red2">Crear nuevo parqueadero
+                                <a [routerLink]="['/parqueadero']"><div class="plus"></div></a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 pt-4">
+                        <div class="card card-cuenta card-hover">
+                            <img src="./assets/img/cuenta/img-reservas.png" class="card-img-top p-3" alt="...">
+                            <div class="card-body pt-0 pb-2">
+                                <h5 class="card-title mt-0 mb-0 font-weight600">Torre de Cali</h5>
+                                <p class="mb-1 text-gray-color2">Carrera 1 No. 27 - 23</p>
+                                <div class="row m-0 reveal justify-content-center align-items-center flex-column">
+                                    <a href="#" class="btn mt-2 pr-4 pl-4">
+                                        <div class="row justify-content-center align-items-center">
+                                            <i class="fas fa-pen mr-2"></i>
+                                            <p class="m-0 text-font14" style="height:20px">EDITAR</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="btn mb-2 mt-2 pr-4 pl-4">
+                                        <div class="row justify-content-center align-items-center">
+                                            <i class="fas fa-trash mr-2" aria-hidden="true"></i>
+                                            <p class="m-0 text-font14" style="height:20px">ELIMINAR</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<app-footer2></app-footer2>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="13px" height="13px" viewBox="0 0 13 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+    <title>nuevo_menuicons/principa</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="menu/CON-PARQUEADERO" transform="translate(-20.000000, -198.000000)">
+            <g id="Group-3" transform="translate(0.000000, 182.000000)">
+                <g id="nuevo_menu" transform="translate(20.197917, 16.000000)">
+                    <rect id="Rectangle" fill="#FFFFFF" x="5.77083333" y="3" width="1" height="7" rx="0.5"></rect>
+                    <path d="M6.25173611,3.13368056 C6.52787849,3.13368056 6.75173611,3.35753818 6.75173611,3.63368056 L6.75173611,9.36631944 C6.75173611,9.64246182 6.52787849,9.86631944 6.25173611,9.86631944 C5.97559374,9.86631944 5.75173611,9.64246182 5.75173611,9.36631944 L5.75173611,3.63368056 C5.75173611,3.35753818 5.97559374,3.13368056 6.25173611,3.13368056 Z" id="Rectangle-Copy-2" fill="#FFFFFF" transform="translate(6.251736, 6.500000) rotate(-90.000000) translate(-6.251736, -6.500000) "></path>
+                    <ellipse id="Oval" stroke="#FFFFFF" cx="6.25173611" cy="6.5" rx="5.75173611" ry="6"></ellipse>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

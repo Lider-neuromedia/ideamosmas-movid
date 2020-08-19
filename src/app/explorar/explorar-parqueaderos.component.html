@@ -1,0 +1,50 @@
+<div class="card card-cuenta card-style1 mt-3 animated fadeIn fast">
+    <div class="card-body">
+        <div class="media">
+            <img src="{{ parqueadero.img }}" class="mr-2 rounded-lg" alt="...">
+            <div class="media-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <h5 class="mt-0 mb-1 text-gray-color1 text-font15">{{ parqueadero.nombre }}</h5>
+                            <p class="mb-1 text-gray-color2 d-flex"><img src="./assets/img/explorar/car-cover.svg"><span class="pl-2 text-font13">cubierto</span><img class="pl-3" src="./assets/img/explorar/car-cover.svg"><span class="pl-2 text-font13">300 metros</span></p>
+                            <span class="d-flex align-items-center justify-content-between">
+                                <ul class="d-flex mb-0">
+                                    <li><img src="./assets/img/cuenta/starfill.svg"></li>
+                                    <li><img src="./assets/img/cuenta/starfill.svg"></li>
+                                    <li><img src="./assets/img/cuenta/starfill.svg"></li>
+                                    <li><img src="./assets/img/cuenta/starfill.svg"></li>
+                                    <li><img src="./assets/img/cuenta/starfill.svg"></li>
+                                </ul>
+                                <small class="text-gray-light">3 comentarios</small>
+                            </span>
+                            <ul class="d-flex mb-0 justify-content-between">
+                                <li><img src="./assets/img/explorar/clock-fill-rounded.svg"></li>
+                                <li><img src="./assets/img/explorar/sillaruedas-fill-rounded.svg"></li>
+                                <li><img src="./assets/img/explorar/clock-fill-rounded.svg"></li>
+                                <li><img src="./assets/img/explorar/cam-fill-rounded.svg"></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="row justify-content-center flex-column">
+                                <div class="col">
+                                    <p class="mb-1 btn-text-blue font-weight600 text-center">${{ parqueadero.precio }}</p>
+                                </div>
+                                <div class="col">
+                                    <p class="m-0 pt-4"><img src="./assets/img/explorar/hearth.svg" alt=""><span class="text-red2 pl-2 text-font13">Favorito</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center mt-3 pt-2 pb-1 border-top">
+                    <button class="btn btn-gray-md-outline mr-2">Detalles</button>
+                    <button (click)="verParqueadero()" class="btn btn-red-md">Reservar</button>
+
+                    <!-- <a [routerLink]="['detalle',10]" class="btn btn-red-md">Reservar</a> -->
+                    <!-- <a [routerLink]="['/detalle',i]" class="btn btn-red-md">Reservar</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

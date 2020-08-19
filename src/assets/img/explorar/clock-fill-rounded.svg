@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="27px" height="27px" viewBox="0 0 27 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+    <title>Groupicons/principa</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="tarjetas/simple" transform="translate(-181.000000, -86.000000)">
+            <g id="Group" transform="translate(181.000000, 86.000000)">
+                <circle id="Oval" stroke="#25BBD4" cx="13.5" cy="13.5" r="13"></circle>
+                <g id="clock-(2)-copy" transform="translate(7.000000, 7.000000)" fill="#25BBD4" fill-rule="nonzero">
+                    <path d="M6.5,0 C2.91596322,0 0,2.91596322 0,6.5 C0,10.0840368 2.91596322,13 6.5,13 C10.0840368,13 13,10.0840368 13,6.5 C13,2.91596322 10.0840368,0 6.5,0 Z M6.5,12.1874963 C3.36385785,12.1874963 0.812503666,9.63614215 0.812503666,6.5 C0.812503666,3.36385785 3.36385785,0.812503666 6.5,0.812503666 C9.63614215,0.812503666 12.1874963,3.36385785 12.1874963,6.5 C12.1874963,9.63614215 9.63614215,12.1874963 6.5,12.1874963 Z" id="Shape"></path>
+                    <polygon id="Path" points="7.77851356 3 7 3 7 7.36333666 9.44956681 10 10 9.40752503 7.77851356 7.0163627"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

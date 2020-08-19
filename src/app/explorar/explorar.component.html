@@ -1,0 +1,117 @@
+<section class="container-explorar">
+    <nav class="fixed-top navbar navbar-expand-lg navbar-light flex-column p-0">
+        <div class="topbar bg-white w-100 pt-1 pr-3 pb-1 pl-3">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item" routerLinkActive="active">
+                            <a class="nav-link" href="#">¿Cómo funciona?</a>
+                        </li>
+                        <li class="nav-item" routerLinkActive="active">
+                            <a class="nav-link" href="#">Nosotros</a>
+                        </li>
+                        <li class="nav-item" routerLinkActive="active">
+                            <a class="nav-link" href="#">¿Necesitas ayuda?</a>
+                        </li>
+                        <li class="nav-item" routerLinkActive="active">
+                            <a class="nav-link" [routerLink]="['login']">Mi cuenta</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="filter-explorar bg-white w-100 pt-1 pr-3 pb-1 pl-3 bg-red">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="./assets/img/logo_blanco.png" width="auto" height="40" alt="" loading="lazy">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item" routerLinkActive="active">
+                            <a class="nav-link" href="#">¿Cómo funciona?</a>
+                        </li>
+                        <li class="nav-item" routerLinkActive="active">
+                            <a class="nav-link" href="#">Nosotros</a>
+                        </li>
+                        <li class="nav-item" routerLinkActive="active">
+                            <a class="nav-link" href="#">¿Necesitas ayuda?</a>
+                        </li>
+                        <li class="nav-item" routerLinkActive="active">
+                            <a class="nav-link" [routerLink]="['login']">Mi cuenta</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section id="content-map">
+        <div class="sidebar-map toggled">
+            <div class="container-fluid">
+                <div class="row align-items-center pt-4">
+                    <div class="col-sm-6 text-black-gray">
+                        <ul>
+                            <li class="text-font14 d-flex"><img src="./assets/img/explorar/parqueaderos-cerca.svg"><span class="pl-2">Parqueaderos cerca de <b>Cali</b></span></li>
+                            <li class="text-font14 d-flex pt-1"><img src="./assets/img/explorar/market.svg"><span class="pl-2"><b>12 resultados</b></span></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="dropdown">
+                            <a type="text" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn-gray-xs-outline2 text-font13 d-flex">
+                                <img src="./assets/img/explorar/market.svg"><span class="pl-1 text-black-gray">Ordenar por</span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#"> Mi cuenta</a>
+                                <a class="dropdown-item" href="#"> Mi cuenta</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="dropdown">
+                            <a type="text" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn-gray-xs-outline2 text-font13 d-flex">
+                                <img src="./assets/img/explorar/market.svg"><span class="pl-1 text-black-gray">Filtros</span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#"> Mi cuenta</a>
+                                <a class="dropdown-item" href="#"> Mi cuenta</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <app-explorar-parqueaderos (parqueaderoSelection)="verParqueadero($event)" [parqueadero]="parqueadero" [index]="i" *ngFor="let parqueadero of parqueaderos; let i = index"></app-explorar-parqueaderos>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="map">
+            <p class="text-right">
+                <button type="button" id="sidebarmapCollapse" class="btn btn-info">Boton</button>
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.922030844449!2d-76.52970738474816!3d3.3692356526985945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a17491d2a5f9%3A0xf06c44da2d3c8a74!2sCentro%20Comercial%20Jard%C3%ADn%20Plaza!5e0!3m2!1ses!2sco!4v1596231158516!5m2!1ses!2sco"
+                frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+    </section>
+
+    <!-- <div class="pt-5">
+        <div class="row">
+            <div class="col-sm">
+                <div class="pb-0">
+                    <div class="card card-cuenta">
+                        <div class="card-body datos-personales">
+                            <div class="row pl-3 pr-3">
+                                <p class="m-0">menu</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+</section>

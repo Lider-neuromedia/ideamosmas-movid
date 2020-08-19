@@ -1,0 +1,77 @@
+<app-navbar></app-navbar>
+
+<section class="login">
+    <div class="container">
+        <app-change></app-change>
+        <div class="pt-4 pb-5 row">
+            <div class="pt-4 col-sm form-auth p-0">
+                <form class="row justify-content-center align-self-center">
+                    <div class="col-md-8">
+                        <div class="col-sm pb-2">
+                            <h2 class="title-red text-center">INICIAR SESIÓN</h2>
+                        </div>
+                        <div class="col-sm">
+                            <div class="input-group mb-4">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text"><i class="fa fa-user-circle" aria-hidden="true" style="font-size:22px"></i></div>
+                                </div>
+                                <input type="text" class="form-control form-control-lg style-form-auth" id="inlineFormInputGroup" placeholder="Username">
+                            </div>
+                        </div>
+                        <div class="col-sm">
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text"><i class="fa fa-key" aria-hidden="true" style="font-size:22px"></i></div>
+                                </div>
+                                <input type="password" class="form-control form-control-lg style-form-auth" id="inlineFormInputGroup2" placeholder="Contraseña">
+                            </div>
+                        </div>
+                        <div class="col-sm text-left">
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" id="autoSizingCheck2">
+                                <label class="form-check-label text-gray-light" for="autoSizingCheck2">
+                                    Recuerda mis datos
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-sm mb-2">
+                            <button type="submit" class="btn btn-red btn-block">LOGIN</button>
+                        </div>
+                        <div class="col-sm mb-3">
+                            <a href="#" class="text-gray-light text-font14">Olvide mi contraseña</a>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-sm-4">
+                                <hr class="w-20">
+                            </div>
+                            <div class="col-sm-4">
+                                <span class="text-font13 text-gray-light2">También puedes</span>
+                            </div>
+                            <div class="col-sm-4">
+                                <hr class="w-20">
+                            </div>
+                        </div>
+                        <div class="col-12 mb-3 ">
+                            <a [routerLink]="['/datos-personales']" class="btn btn-primary border-0 p-0 btn-facebook btn-block">
+                                <i class="fab fa-facebook-square align-middle" aria-hidden="true"></i>
+                                <span class="align-middle">INGRESA CON FACEBOOK</span>
+                            </a>
+                        </div>
+                        <div class="col-sm mb-3">
+                            <a href="#" class="btn btn-primary border-0 p-0 btn-google btn-block">
+                                <i class="fab fa-google align-middle" aria-hidden="true"></i>
+                                <span class="align-middle">INGRESA CON GOOGLE</span>
+                            </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-sm p-0">
+                <img src="./assets/img/auth/iniciar_sesion.jpg" alt="" class="img-fluid">
+            </div>
+        </div>
+    </div>
+
+    <app-footer></app-footer>
+
+</section>
