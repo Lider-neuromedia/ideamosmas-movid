@@ -85,7 +85,12 @@
                 </div>
                 <div class="row">
                     <div class="col-sm-12">
-                        <app-explorar-parqueaderos (parqueaderoSelection)="verParqueadero($event)" [parqueadero]="parqueadero" [index]="i" *ngFor="let parqueadero of parqueaderos; let i = index"></app-explorar-parqueaderos>
+                        <div *ngIf="state == 'explorar'"> 
+                            <app-explorar-parqueaderos (parqueaderoSelection)="verParqueadero($event)" [parqueadero]="parqueadero" [index]="i" *ngFor="let parqueadero of parqueaderos; let i = index"></app-explorar-parqueaderos>
+                        </div>
+                        <div *ngIf="state == 'detalle'"> 
+                            <app-explorar-detalle [index]="selectedIndex"></app-explorar-detalle>
+                        </div>
                     </div>
                 </div>
             </div>

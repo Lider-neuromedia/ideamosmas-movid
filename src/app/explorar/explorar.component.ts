@@ -10,6 +10,8 @@ import { Router } from '@angular/router';
 export class ExplorarComponent implements OnInit {
 
   parqueaderos: Parqueadero[] = [];
+  state = 'explorar';
+  selectedIndex = 0;
 
   constructor(private _parqueaderosService: ParqueaderosService,
               private router: Router) {
@@ -20,7 +22,9 @@ export class ExplorarComponent implements OnInit {
   }
 
   verParqueadero( idx: number ){
-    this.router.navigate( ['/detalle', idx] );
+    this.state = 'detalle';
+    this.selectedIndex = idx;
+    // this.router.navigate( ['/detalle', idx] );
   }
 }
 

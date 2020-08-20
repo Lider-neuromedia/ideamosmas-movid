@@ -29,5 +29,3 @@ export class ExplorarParqueaderosComponent implements OnInit {
     this.parqueaderoSelection.emit(this.index);
   }
 }
-
-
