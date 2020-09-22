@@ -20,6 +20,7 @@ import { EventosComponent } from './cuenta/eventos/eventos.component';
 import { PaquetesComponent } from './cuenta/paquetes/paquetes.component';
 import { ExplorarComponent } from './explorar/explorar.component';
 import { ExplorarDetalleComponent } from './explorar/explorar-detalle.component';
+import { CommonModule } from '@angular/common';
 
 const APP_ROUTES: Routes = [
     {path: '', component: HomeComponent},
@@ -48,4 +49,4 @@ const APP_ROUTES: Routes = [
     {path: '**', pathMatch: 'full', redirectTo: ''}
 ];
 
-export const APP_ROUTING = RouterModule.forRoot(APP_ROUTES);
+export const APP_ROUTING = RouterModule.forRoot(APP_ROUTES, {useHash: true});
