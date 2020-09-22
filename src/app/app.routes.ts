@@ -1,6 +1,12 @@
 import { RouterModule, Routes } from '@angular/router';
+
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './auth/login/login.component';
+
+import { RegisterOtpComponent } from './auth/register/persona/register-otp/register-otp.component';
+import { RegisterPersonaComponent } from './auth/register/persona/register-persona/register-persona.component';
+import { RegisterPassComponent } from './auth/register/persona/register-pass/register-pass.component';
+
 import { PersonaComponent } from './auth/register/persona/persona.component';
 import { EmpresaComponent } from './auth/register/empresa/empresa.component';
 import { DatosPersonalesComponent } from './cuenta/datos-personales/datos-personales.component';
@@ -18,7 +24,15 @@ import { ExplorarDetalleComponent } from './explorar/explorar-detalle.component'
 const APP_ROUTES: Routes = [
     {path: '', component: HomeComponent},
     {path: 'login', component: LoginComponent},
-    {path: 'registro-persona', component: PersonaComponent},
+    {
+        path: 'usuario',
+        component: PersonaComponent,
+        children: [
+            {path: 'registro-otp', component: RegisterOtpComponent},
+            {path: 'registro-persona', component: RegisterPersonaComponent},
+            {path: 'registro-pass', component: RegisterPassComponent},
+        ]
+    },
     {path: 'registro-empresa', component: EmpresaComponent},
     {path: 'datos-personales', component: DatosPersonalesComponent},
     {path: 'reservas', component: ReservasComponent},

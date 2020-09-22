@@ -1,3 +1,5 @@
+<app-como-funciona></app-como-funciona>
+<app-necesitas-ayuda></app-necesitas-ayuda>
 <section class="container-explorar">
     <nav class="fixed-top navbar navbar-expand-lg navbar-light flex-column p-0">
         <div class="topbar bg-white w-100 pt-1 pr-3 pb-1 pl-3">
@@ -5,22 +7,7 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item" routerLinkActive="active">
-                            <a class="nav-link" href="#">¿Cómo funciona?</a>
-                        </li>
-                        <li class="nav-item" routerLinkActive="active">
-                            <a class="nav-link" href="#">Nosotros</a>
-                        </li>
-                        <li class="nav-item" routerLinkActive="active">
-                            <a class="nav-link" href="#">¿Necesitas ayuda?</a>
-                        </li>
-                        <li class="nav-item" routerLinkActive="active">
-                            <a class="nav-link" [routerLink]="['login']">Mi cuenta</a>
-                        </li>
-                    </ul>
-                </div>
+                <app-item-menu></app-item-menu>
             </div>
         </div>
         <div class="filter-explorar bg-white w-100 pt-1 pr-3 pb-1 pl-3 bg-red">
@@ -29,21 +16,21 @@
                     <img src="./assets/img/logo_blanco.png" width="auto" height="40" alt="" loading="lazy">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item" routerLinkActive="active">
-                            <a class="nav-link" href="#">¿Cómo funciona?</a>
+                            <a class="nav-link" href="#"></a>
                         </li>
                         <li class="nav-item" routerLinkActive="active">
-                            <a class="nav-link" href="#">Nosotros</a>
+                            <a class="nav-link" href="#"></a>
                         </li>
                         <li class="nav-item" routerLinkActive="active">
-                            <a class="nav-link" href="#">¿Necesitas ayuda?</a>
+                            <a class="nav-link" href="#"></a>
                         </li>
                         <li class="nav-item" routerLinkActive="active">
-                            <a class="nav-link" [routerLink]="['login']">Mi cuenta</a>
+                            <a class="nav-link" [routerLink]="['login']"></a>
                         </li>
                     </ul>
                 </div>
@@ -53,7 +40,7 @@
     <section id="content-map">
         <div class="sidebar-map toggled">
             <div class="container-fluid">
-                <div class="row align-items-center pt-4">
+                <div *ngIf="state == 'explorar'" class="row align-items-center pt-4">
                     <div class="col-sm-6 text-black-gray">
                         <ul>
                             <li class="text-font14 d-flex"><img src="./assets/img/explorar/parqueaderos-cerca.svg"><span class="pl-2">Parqueaderos cerca de <b>Cali</b></span></li>
@@ -66,8 +53,8 @@
                                 <img src="./assets/img/explorar/market.svg"><span class="pl-1 text-black-gray">Ordenar por</span>
                             </a>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="#"> Mi cuenta</a>
-                                <a class="dropdown-item" href="#"> Mi cuenta</a>
+                                <a class="dropdown-item" href="#"> Precio</a>
+                                <a class="dropdown-item" href="#"> Distancia</a>
                             </div>
                         </div>
                     </div>
@@ -84,21 +71,22 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-sm-12">
-                        <div *ngIf="state == 'explorar'"> 
+                    <div class="col-sm-12 ">
+                        <div *ngIf="state == 'explorar'" class="overflow-scroll">
                             <app-explorar-parqueaderos (parqueaderoSelection)="verParqueadero($event)" [parqueadero]="parqueadero" [index]="i" *ngFor="let parqueadero of parqueaderos; let i = index"></app-explorar-parqueaderos>
                         </div>
-                        <div *ngIf="state == 'detalle'"> 
-                            <app-explorar-detalle [index]="selectedIndex"></app-explorar-detalle>
-                        </div>
                     </div>
+                    <div class="container overflow-scroll" *ngIf="state == 'detalle'">
+                        <app-explorar-detalle class="row " [index]="selectedIndex"></app-explorar-detalle>
+                    </div>
+
                 </div>
             </div>
         </div>
         <div class="map">
-            <p class="text-right">
+            <!-- <p class="text-right">
                 <button type="button" id="sidebarmapCollapse" class="btn btn-info">Boton</button>
-            </p>
+            </p> -->
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.922030844449!2d-76.52970738474816!3d3.3692356526985945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a17491d2a5f9%3A0xf06c44da2d3c8a74!2sCentro%20Comercial%20Jard%C3%ADn%20Plaza!5e0!3m2!1ses!2sco!4v1596231158516!5m2!1ses!2sco"
                 frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         </div>

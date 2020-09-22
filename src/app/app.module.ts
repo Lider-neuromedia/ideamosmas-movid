@@ -1,10 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HttpHeaders } from '@angular/common/http';
 
 import { APP_ROUTING } from './app.routes';
-
 import { ParqueaderosService } from './explorar/servicios/parqueaderos.service';
 
 import { AppComponent } from './app.component';
@@ -34,6 +33,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ItemMenuComponent } from './navbar/item-menu/item-menu.component';
 import { ComoFuncionaComponent } from './navbar/como-funciona/como-funciona.component';
 import { NecesitasAyudaComponent } from './navbar/necesitas-ayuda/necesitas-ayuda.component';
+import { RegisterPersonaComponent } from './auth/register/persona/register-persona/register-persona.component';
+import { RegisterPassComponent } from './auth/register/persona/register-pass/register-pass.component';
+import { RegisterOtpComponent } from './auth/register/persona/register-otp/register-otp.component';
 
 
 @NgModule({
@@ -63,11 +65,15 @@ import { NecesitasAyudaComponent } from './navbar/necesitas-ayuda/necesitas-ayud
     Footer2Component,
     ItemMenuComponent,
     ComoFuncionaComponent,
-    NecesitasAyudaComponent
+    NecesitasAyudaComponent,
+    RegisterPersonaComponent,
+    RegisterPassComponent,
+    RegisterOtpComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     APP_ROUTING,
     AgmCoreModule.forRoot({
@@ -76,7 +82,7 @@ import { NecesitasAyudaComponent } from './navbar/necesitas-ayuda/necesitas-ayud
     })
   ],
   providers: [
-    ParqueaderosService
+    ParqueaderosService,
   ],
   bootstrap: [AppComponent]
 })

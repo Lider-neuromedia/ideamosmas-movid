@@ -5,86 +5,16 @@
         <app-change></app-change>
         <div class="pt-4 pb-5 row">
             <div class="pt-4 col-sm form-auth p-0">
-                <form class="row justify-content-center align-self-center">
-                    <div class="col-md-10">
-                        <div class="col-sm pb-3">
-                            <h2 class="title-red text-center">REGISTRO PERSONA</h2>
+                <div class="container">
+                    <div class="col-sm-12 text-center">
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-secondary" routerLinkActive="active" [routerLink]="['registro-otp']">Código</button>
+                            <button type="button" class="btn btn-secondary" routerLinkActive="active" [routerLink]="['registro-persona']">Registro</button>
+                            <button type="button" class="btn btn-secondary" routerLinkActive="active" [routerLink]="['registro-pass']">Contraseña</button>
                         </div>
-                        <div class="row">
-                            <div class="col-sm">
-                                <div class="input-group mb-4">
-                                    <input type="text" class="form-control form-control-lg style-form-auth" placeholder="Nombre completo">
-                                </div>
-                            </div>
-                            <div class="col-sm">
-                                <div class="input-group mb-2">
-                                    <input type="text" class="form-control form-control-lg style-form-auth" placeholder="Apellidos">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm">
-                                <div class="input-group mb-4">
-                                    <input type="text" class="form-control form-control-lg style-form-auth" placeholder="Ciudad">
-                                </div>
-                            </div>
-                            <div class="col-sm">
-                                <div class="input-group mb-2">
-                                    <input type="number" class="form-control form-control-lg style-form-auth" placeholder="Teléfono">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm">
-                                <div class="input-group mb-4">
-                                    <input type="email" class="form-control form-control-lg style-form-auth" placeholder="Correo electrónico">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm">
-                                <div class="input-group mb-4">
-                                    <input type="password" class="form-control form-control-lg style-form-auth" placeholder="Contraseña">
-                                </div>
-                            </div>
-                            <div class="col-sm">
-                                <div class="input-group mb-4">
-                                    <input type="password" class="form-control form-control-lg style-form-auth" placeholder="Confirmar contraseña">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm text-left">
-                                <div class="form-check mb-4">
-                                    <input class="form-check-input" type="checkbox" id="autoSizingCheck2">
-                                    <label class="form-check-label text-gray-light text-font14" for="autoSizingCheck2">
-                                        Acepto los <a href="#" class="text-red-light">términos y condiciones</a>
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm text-left">
-                                <div class="form-check mb-4">
-                                    <input class="form-check-input" type="checkbox" id="autoSizingCheck2">
-                                    <label class="form-check-label text-gray-light text-font14" for="autoSizingCheck2">
-                                        Acepto recibir comunicaciones de empresas relacionadas con <a href="#" class="text-red-light">diversos sectores</a> por cualquier medio adecuadas a mi perfil
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row pt-4">
-                            <div class="col-sm mb-2">
-                                <button type="submit" class="btn btn-red btn-block">REGISTRARME</button>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm mb-3 text-center">
-                                <span class="text-font15 text-gray-light">Quiero registrarme como </span><a href="#" class="text-red-light text-font15">Empresa</a>
-                            </div>
-                        </div>
+                        <router-outlet></router-outlet>
                     </div>
-                </form>
+                </div>
             </div>
             <div class="col-sm p-0">
                 <img src="./assets/img/auth/registro_persona.png" alt="" class="img-fluid">
