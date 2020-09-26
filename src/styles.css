@@ -50,6 +50,11 @@ textarea:active {
     transition: all .25s linear;
 }
 
+.pt-6 {
+    padding-top: 4.5em;
+    ;
+}
+
 .fade {
     opacity: 1;
 }
@@ -116,6 +121,18 @@ select:hover {
     color: #fff;
 }
 
+.text-font9 {
+    font-size: 9px;
+}
+
+.text-font10 {
+    font-size: 10px;
+}
+
+.text-font12 {
+    font-size: 12px;
+}
+
 .text-font13 {
     font-size: 13px;
 }
@@ -130,6 +147,14 @@ select:hover {
 
 .text-font16 {
     font-size: 16px;
+}
+
+.text-font18 {
+    font-size: 18px !important;
+}
+
+.text-font20 {
+    font-size: 20px;
 }
 
 .text-blue {
@@ -152,8 +177,25 @@ select:hover {
     font-weight: 900;
 }
 
+.rounded-15 {
+    border-radius: 15px;
+}
+
+.modal .modal-dialog {
+    top: 25%;
+}
+
+.border-red {
+    border: 1px solid #EB4555;
+}
+
+.height-input-55 {
+    height: 55px;
+    border-radius: 8px;
+}
+
 .overflow-scroll {
-    height: calc(100vh - 100px);
+    height: calc(100vh - 100px) !important;
     overflow-y: scroll;
 }
 
@@ -163,6 +205,19 @@ select:hover {
 
 ul.menu-main li {
     padding: 0 8px;
+}
+
+.menu-main .ayuda {
+    transition: .5s;
+}
+
+.menu-main .ayuda:hover a {
+    border: 1px solid #EB4555;
+    color: #EB4555 !important;
+}
+
+.border-radius-15 {
+    border-radius: 10px !important;
 }
 
 .border-radius-bottom-15 {
@@ -197,6 +252,15 @@ ul.menu-main li {
     position: sticky;
     top: 0;
     z-index: 1;
+}
+
+
+/* .modal {
+    z-index: 1;
+} */
+
+.modal-backdrop {
+    z-index: 1000 !important;
 }
 
 .border-gray {
@@ -988,11 +1052,42 @@ ul.menu-main li {
     /* background: red; */
 }
 
-.cuenta-sidebar ul li:hover a {
+.cuenta-sidebar ul li:hover a,
+.cuenta-sidebar ul li.active a {
     color: #25BBD4;
 }
 
-.cuenta-sidebar ul li:hover {
+.cuenta-sidebar .interna-crearparqueadero a {
+    border-radius: 5px;
+    border: 1px solid #EB4555;
+    transition: .5s;
+}
+
+.cuenta-sidebar .interna-crearparqueadero:hover a,
+.cuenta-sidebar .interna-crearparqueadero.active a {
+    background: #fff!important;
+    color: #EB4555 !important;
+}
+
+.anclas {
+    height: 30px;
+}
+
+.menu-anclas-crearparqueadero li a {
+    color: #4F4E4F;
+}
+
+.menu-anclas-crearparqueadero li a:hover,
+.menu-anclas-crearparqueadero li a.active {
+    color: #EB4555;
+}
+
+.menu-anclas-crearparqueadero li a {
+    color: #4F4E4F;
+}
+
+.cuenta-sidebar ul li:hover,
+.cuenta-sidebar ul li.active {
     background: #EBFCFF;
 }
 
@@ -1027,6 +1122,18 @@ ul.menu-main li {
     font-size: 14px;
     font-family: Roboto;
     margin: 0;
+}
+
+.datos-personales input[type="checkbox"] {
+    display: none;
+}
+
+.datos-personales input[type="radio"] {
+    display: none;
+}
+
+.datos-personales label:hover {
+    cursor: pointer;
 }
 
 .card-cuenta {
@@ -1133,7 +1240,7 @@ agm-map {
 }
 
 .form-control-custom1>label {
-    bottom: 35px;
+    bottom: 48px;
     left: 15px;
     position: relative;
     background-color: white;
@@ -1144,21 +1251,21 @@ agm-map {
 }
 
 .form-control-custom1 select {
-    height: 40px;
+    height: 65px;
     padding: 3px 10px;
 }
 
 .form-control-custom1 input {
-    height: 40px;
+    height: 65px;
 }
 
 .form-control-custom1 .form-control:focus~label {
-    bottom: 54px;
+    bottom: 78px;
     color: #58A1D8;
 }
 
 .form-control-custom1 .form-control:valid~label {
-    bottom: 54px;
+    bottom: 78px;
 }
 
 
@@ -1223,44 +1330,58 @@ a.nav-link[data-toggle='modal'] {}
 /* FIN MODALES */
 
 
-/* MEDIA QUERIES */
+/* INTERNA EXPLORAR */
 
-@media (min-width: 320px) {
-    .elige-donde-estacion {
-        font-size: 30px;
-        padding: 0em;
-    }
+#nav-promociones .card-body,
+#nav-paquetes .card-body,
+#nav-eventos .card-body {
+    position: relative;
 }
 
-@media (min-width: 480px) {}
+#nav-promociones .brand,
+#nav-paquetes .brand {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
 
-@media (min-width: 768px) {}
+#nav-eventos .arrow-events {
+    position: absolute;
+    right: 20px;
+    top: 30px;
+}
+
+#nav-promociones .tag,
+#nav-paquetes .tag {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+#nav-paquetes .card {
+    border: 2ox solid #fff;
+}
+
+#nav-paquetes .card:hover {
+    border: 1px solid #25BBD4;
+    cursor: pointer;
+}
+
+#nav-eventos .card:hover {
+    cursor: pointer;
+}
+
+
+/* FIN INTERNA EXPLORAR */
 
 @media (min-width: 1024px) {
-    .jumbotron {
-        padding: 5em;
-    }
-    .elige-donde-estacion {
-        font-size: 56px;
-        padding: 0;
+    .result-filter-basic span {
+        font-size: 10px;
     }
 }
 
-@media (min-width: 1280px) {
-    .jumbotron {
-        padding: 7em;
-    }
-    .elige-donde-estacion {
-        font-size: 56px;
-        padding: 0 1.5em;
+@media (min-width: 1366px) {
+    .result-filter-basic span {
+        font-size: 14px;
     }
 }
-
-@media (min-width: 1920px) {
-    .jumbotron {
-        padding: 13em;
-    }
-}
-
-
-/* FIN MEDIA QUERIES */

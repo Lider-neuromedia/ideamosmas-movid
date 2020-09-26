@@ -1,0 +1,139 @@
+.filter-btn a {
+    background-color: #fff;
+}
+
+.filter-btn-group button {
+    font-size: 14px;
+    padding: 19px 8px;
+    border: 1px solid #EB4555;
+}
+
+.filter-btn-group button:first-child {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.filter-btn-group button:last-child {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.filter-btn-group button.active {
+    background-color: #E9ECEE;
+    color: #EB4555;
+    font-weight: 600;
+}
+
+.filter-btn-group button:hover {
+    border: 1px solid #fff;
+}
+
+.filter-search {
+    border-radius: 10px;
+    border: 1px solid #25BBD4;
+}
+
+.filter-search ul li {
+    padding: 10px;
+    border-bottom: 1px solid #BABEC1;
+}
+
+.filter-search ul li:last-child {
+    border-bottom: 0;
+}
+
+.filter-search input {
+    height: 50px;
+    border: 0;
+    /* width: 69%; */
+}
+
+.filter-search p {
+    padding-left: 12px;
+}
+
+.filter-search button {
+    border: 0;
+    border-radius: 0;
+    padding: 4px 10px 4px 10px;
+}
+
+.filter-search button:hover {
+    background: transparent;
+}
+
+.filter-search .lupa:first-child {
+    border-right: 1px solid #d1d1d1;
+}
+
+.container-llegada-filters {
+    background: #EB4555;
+    padding: 8px;
+    border: 1px solid #fff;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+#modal-llegada .card {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+#modal-llegada .card {
+    /* border: 1px solid #fff; */
+    border-radius: 15px;
+}
+
+#modal-llegada .nav-tabs {
+    border: 0;
+}
+
+#modal-llegada .nav-tabs .nav-item {
+    border: 0;
+    margin: 0;
+}
+
+#modal-llegada .nav-tabs .nav-link.active {
+    color: #EB4555;
+    border: 0;
+    background: #E9ECEE;
+}
+
+#modal-llegada .nav-tabs .nav-link {
+    border-radius: 0;
+}
+
+#modal-llegada .nav-tabs .nav-item:last-child .nav-link {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#modal-llegada .nav-tabs .nav-item:first-child .nav-link {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+#modal-vehiculo .card,
+#modal-vehiculo .card-header {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+#modal-vehiculo .card {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+#modal-vehiculo input {
+    display: none;
+}
+
+#modal-vehiculo label:hover {
+    cursor: pointer;
+}
+
+#modal-vehiculo .card,
+#modal-llegada .card,
+#search .card {
+    z-index: 1 !important;
+}

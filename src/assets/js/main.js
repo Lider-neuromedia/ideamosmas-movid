@@ -10,4 +10,5 @@ $(document).ready(function() {
     });
 
     $("#galeria").dropzone({ url: "" });
+    $('#tooltips').tooltip();
 });

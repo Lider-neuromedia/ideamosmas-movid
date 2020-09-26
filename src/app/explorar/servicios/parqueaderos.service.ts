@@ -9,21 +9,6 @@ export class ParqueaderosService {
             precio: 5.000,
             img: "assets/img/explorar/image.png"
         },
-        {
-            nombre: "Parqueadero prueba 2",
-            precio: 10.000,
-            img: "assets/img/explorar/image.png"
-        },
-        {
-            nombre: "Parqueadero prueba 3",
-            precio: 8.000,
-            img: "assets/img/explorar/image.png"
-        },
-        {
-            nombre: "Parqueadero prueba 4",
-            precio: 3.000,
-            img: "assets/img/explorar/image.png"
-        },
     ];
 
     constructor(){

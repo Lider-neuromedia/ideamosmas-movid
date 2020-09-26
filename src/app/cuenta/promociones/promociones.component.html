@@ -11,7 +11,10 @@
                         <div class="row justify-content-between pt-3 pb-3 pl-3 pr-3">
                             <h4 class="title-red m-0">Promociones</h4>
                             <span class="create-plus text-red2">Crear nueva promoción
-                                <a href="#"><div class="plus"></div></a></span>
+                                <a href="#" data-toggle="modal" data-target="#crearpromocion">
+                                    <div class="plus"></div>
+                                </a>
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -115,4 +118,104 @@
         </div>
     </div>
 </section>
+<div class="modal fade" id="crearpromocion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="exampleModalLabel"></h2>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body pb-0">
+                <h4 class="text-red2 text-center mb-4">Crear promociones</h4>
+                <form action="">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label class="text-blue">NOMBRE DE LA PROMOCIÓN</label>
+                            <input type="email" class="form-control height-input-55" id="inputEmail4">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label class="text-blue">FECHA DE LA PROMOCIÓN</label>
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                    <select id="inputState" class="form-control height-input-55">
+                                        <option selected>Día</option>
+                                        <option>...</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <select id="inputState" class="form-control height-input-55">
+                                        <option selected>Mes</option>
+                                        <option>...</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <select id="inputState" class="form-control height-input-55">
+                                        <option selected>Año</option>
+                                        <option>...</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label class="text-blue">TIPOS DE VEHÍCULOS</label>
+                            <select id="inputState" class="form-control height-input-55">
+                                <option selected>Selecciona</option>
+                                <option>SEDAN</option>
+                                <option>CAMIONETA</option>
+                                <option>CAMIÓN</option>
+                                <option>VAN</option>
+                                <option>BUS</option>
+                                <option>MOTOCICLETA</option>
+                                <option>BICICLETA</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label class="text-blue">FINALIZACIÓN DE LA PROMOCIÓN</label>
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                    <select id="inputState" class="form-control height-input-55">
+                                        <option selected>Día</option>
+                                        <option>...</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <select id="inputState" class="form-control height-input-55">
+                                        <option selected>Mes</option>
+                                        <option>...</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <select id="inputState" class="form-control height-input-55">
+                                        <option selected>Año</option>
+                                        <option>...</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label class="text-blue">ASIGNAR PARQUEADEROS</label>
+                            <select id="inputState" class="form-control height-input-55">
+                                <option selected>Selecciona</option>
+                                <option>...</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label class="text-blue">TARIFA</label>
+                            <input type="number" class="form-control height-input-55" id="inputPassword4">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer text-center d-flex justify-content-center border-0 pb-5">
+                <button type="button" class="btn btn-red-md w-50 border-radius-15 pt-2 pb-2 text-font18">Crear promoción</button>
+            </div>
+        </div>
+    </div>
+</div>
 <app-footer2></app-footer2>

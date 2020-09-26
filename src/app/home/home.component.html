@@ -2,7 +2,7 @@
 <app-necesitas-ayuda></app-necesitas-ayuda>
 <nav class="fixed-top navbar navbar-expand-lg navbar-light bg-white">
     <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" [routerLink]="['explorar']">
             <img src="./assets/img/logo_color.png" width="auto" height="40" alt="" loading="lazy">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -14,10 +14,15 @@
 
 <section class="main-container">
     <div class="banner card text-white">
-        <img src="./assets/img/home/bg.png" class="card-img" alt="...">
+        <img src="./assets/img/home/bg.png" class="card-img d-none d-sm-none d-xl-block" alt="...">
+        <img src="./assets/img/home/tablet.png" class="card-img d-none d-sm-none d-md-block d-xl-none" alt="...">
+        <img src="./assets/img/home/movil.png" class="card-img d-sm-block d-md-none d-xl-none" alt="...">
         <div class="card-img-overlay container text-center d-flex flex-column justify-content-center">
-            <h1 class="elige-donde-estacion">Elige donde estacionarte antes de llegar a tu destino.</h1>
-            <h4 class="reserva-tu-parqueade">Reserva tu parqueadero de forma ágil, fácil y segura. </h4>
+            <h1 class="elige-donde-estacion mt-4">Elige donde estacionarte antes de llegar a tu destino.</h1>
+            <p class="reserva-tu-parqueade m-0">Reserva tu parqueadero de forma ágil, fácil y segura. </p>
+            <div class="container-filters-home">
+                <app-filters></app-filters>
+            </div>
         </div>
     </div>
     <div class="section1 pt-5 pb-5">
@@ -34,12 +39,12 @@
     </div>
     <div class="section2 pt-5 pb-5">
         <div class="container">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <p class="animate-a-encontrar">Anímate a encontrar tu estacionamiento con anticipación y reservarlo, conoce Movid, es muy fácil</p>
-                </div>
-                <div class="row mt-5">
-                    <div class="col-4">
+            <div class="col-12 text-center">
+                <p class="animate-a-encontrar">Anímate a encontrar tu estacionamiento con anticipación y reservarlo, conoce Movid, es muy fácil</p>
+            </div>
+            <div class="mt-5">
+                <div class="row">
+                    <div class="col-sm">
                         <div class="mb-3">
                             <div class="row">
                                 <div class="media">
@@ -52,7 +57,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-sm">
                         <div class="mb-3">
                             <div class="row">
                                 <div class="media">
@@ -65,7 +70,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-4 ">
+                    <div class="col-sm">
                         <div class="mb-3">
                             <div class="row">
                                 <div class="media">
@@ -84,24 +89,26 @@
     </div>
     <div class="section3 pt-5 pb-5">
         <div class="container">
+            <div class="text-center">
+                <p class="pruebala-ya">¡Pruebala ya! Descargala en tu dispositivo móvil</p>
+            </div>
             <div class="row justify-content-center">
-                <div class="col-12 text-center">
-                    <p class="pruebala-ya">¡Pruebala ya! Descargala en tu dispositivo móvil</p>
+                <div class="text-center mb-2 pr-4 pl-4">
+                    <img src="./assets/img/home/APPSTORESVG.svg" alt="...">
                 </div>
-                <div class="col-2 text-center">
-                    <img src="./assets/img/home/appstore.png" alt="...">
-                </div>
-                <div class="col-2 text-center">
-                    <img src="./assets/img/home/playstore.png" alt="...">
+                <div class="text-center mb-2 pr-4 pl-4">
+                    <img src="./assets/img/home/PLAYSTORESVG.svg" alt="...">
                 </div>
             </div>
         </div>
     </div>
     <div class="section5 pt-5 pb-5">
         <div class="container">
-            <div class="row">
+            <div class="row justify-content-center">
                 <div class="card text-white">
-                    <img src="./assets/img/home/seccion4_bg.png" class="card-img" alt="...">
+                    <img src="./assets/img/home/seccion4_bg.png" class="card-img d-none d-sm-none d-xl-block" alt="...">
+                    <img src="./assets/img/home/seccion4_tablet.png" class="card-img d-none d-sm-none d-md-block d-xl-none" alt="...">
+                    <img src="./assets/img/home/seccion4_phone.png" class="card-img d-sm-block d-md-none d-xl-none" alt="...">
                     <div class="card-img-overlay container text-center d-flex flex-column justify-content-center">
                         <p class="todavia-no-encuentra mt-3"><b>¿Todavía no encuentras un espacio para dejar tu vehículo?</b> <br>Nosotros te ayudamos a buscarlo</p>
                         <p class="text-center mt-1 mb-3">
@@ -119,15 +126,15 @@
                     <p class="te-ayudamos-a-locali">Te ayudamos a localizar un parqueadero<br> cerca de tu destino con múltiples beneficios.</p>
                     <p class="te-ayudamos-a-locali2">Reserva y cuenta con tu espacio disponible a los mejores precios.</p>
                 </div>
-                <div class="col-sm text-center">
+                <div class="col-6 col-sm text-center mb-3">
                     <div class="card">
-                        <img src="./assets/img/home/seccion5_icono1.png" class="card-img-top" alt="...">
+                        <img src="./assets/img/home/seccion5_icono1.svg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <p class="card-text"><b>Encontramos el parqueo</b> que se ajuste a lo que quieres para tu comodidad y tranquilidad.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm text-center">
+                <div class="col-6 col-sm text-center mb-3">
                     <div class="card">
                         <img src="./assets/img/home/seccion5_icono2.png" class="card-img-top" alt="...">
                         <div class="card-body">
@@ -135,7 +142,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm text-center">
+                <div class="col-6 col-sm text-center mb-3">
                     <div class="card">
                         <img src="./assets/img/home/seccion5_icono3.png" class="card-img-top" alt="...">
                         <div class="card-body">
@@ -143,7 +150,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm text-center">
+                <div class="col-6 col-sm text-center mb-3">
                     <div class="card">
                         <img src="./assets/img/home/seccion5_icono4.png" class="card-img-top" alt="...">
                         <div class="card-body">
@@ -151,7 +158,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm text-center">
+                <div class="col-6 col-sm text-center mb-3">
                     <div class="card">
                         <img src="./assets/img/home/seccion5_icono5.png" class="card-img-top" alt="...">
                         <div class="card-body">
@@ -170,7 +177,7 @@
                     <p class="ofertalo-en-movid-y">Ofertalo en Movid y aumenta tus ingresos de forma fácil y segura, solo debes registrar tu estacionamiento para ser usado por un usuario de nuestra plataforma.</p>
                     <button type="button" class="btn btn-red">Registro de oferta de parqueo</button>
                 </div>
-                <div class="col-sm">
+                <div class="col-sm mt-3">
                     <img src="./assets/img/home/seccion5_foto.png" class="img-fluid" alt="Responsive image">
                 </div>
             </div>

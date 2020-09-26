@@ -3,13 +3,13 @@
         <a href="#" class="nav-link" data-toggle="modal" data-target="#comoFunciona"><img src="assets/img/question.png" class="pr-2"> ¿Cómo funciona?</a>
     </li>
     <li class="nav-item" routerLinkActive="active">
-        <a class="nav-link" href="#"><img src="assets/img/nosotros_logo.png" class="pr-2">Nosotros</a>
+        <a class="nav-link" [routerLink]="['/']"><img src="assets/img/nosotros_logo.png" class="pr-2">Nosotros</a>
     </li>
-    <li class="nav-item" routerLinkActive="active">
+    <li class="nav-item ayuda" routerLinkActive="active">
         <a href="#" class="nav-link border-gray text-gray-light2 font-weight600" data-toggle="modal" data-target="#necesitasAyuda"><img src="assets/img/ayuda.png" class="pr-2">¿Necesitas ayuda?</a>
     </li>
     <li class="nav-item" routerLinkActive="active">
-        <a class="nav-link" href="#">Registrate</a>
+        <a class="nav-link" [routerLink]="['usuario/registro-otp']">Registrate</a>
     </li>
     <li class="nav-item" routerLinkActive="active">
         <a class="nav-link account btn-red-sm" [routerLink]="['login']"><img src="assets/img/account.png" class="pr-2">Mi cuenta</a>

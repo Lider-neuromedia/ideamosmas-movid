@@ -36,6 +36,8 @@ import { NecesitasAyudaComponent } from './navbar/necesitas-ayuda/necesitas-ayud
 import { RegisterPersonaComponent } from './auth/register/persona/register-persona/register-persona.component';
 import { RegisterPassComponent } from './auth/register/persona/register-pass/register-pass.component';
 import { RegisterOtpComponent } from './auth/register/persona/register-otp/register-otp.component';
+import { FiltersComponent } from './filters/filters.component';
+import { FiltersAdvancedComponent } from './filters-advanced/filters-advanced.component';
 
 
 @NgModule({
@@ -68,7 +70,9 @@ import { RegisterOtpComponent } from './auth/register/persona/register-otp/regis
     NecesitasAyudaComponent,
     RegisterPersonaComponent,
     RegisterPassComponent,
-    RegisterOtpComponent
+    RegisterOtpComponent,
+    FiltersComponent,
+    FiltersAdvancedComponent
   ],
   imports: [
     BrowserModule,

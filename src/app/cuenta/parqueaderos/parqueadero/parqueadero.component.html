@@ -9,11 +9,19 @@
                 <div class="pb-0">
                     <div class="card card-cuenta">
                         <div class="card-body datos-personales">
-                            <div class="row pl-3 pr-3">
-                                <p class="m-0">menu</p>
+                            <div class="pl-3 pr-3">
+                                <ul class="row justify-content-between align-content-center m-0 menu-anclas-crearparqueadero">
+                                    <li><a [routerLink]="['/parqueadero']" fragment="ubicacion">Ubicación</a></li>
+                                    <li><a [routerLink]="['/parqueadero']" fragment="caracteristicas">Características</a></li>
+                                    <li><a [routerLink]="['/parqueadero']" fragment="disponibilidad">Disponibilidad</a></li>
+                                    <li><a [routerLink]="['/parqueadero']" fragment="vehiculos">Vehículos</a></li>
+                                    <li><a [routerLink]="['/parqueadero']" fragment="descripcion">Descripción</a></li>
+                                    <li><a [routerLink]="['/parqueadero']" fragment="galeria">Galería</a></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
+                    <div class="anclas" id="ubicacion"></div>
                     <div class="card card-cuenta mt-5">
                         <div class="card-body datos-personales">
                             <div class="pl-2 pr-2">
@@ -31,7 +39,8 @@
                             </div>
                         </div>
                     </div>
-                    <form action="prueba.php" method="post">
+                    <div class="anclas" id="caracteristicas"></div>
+                    <form action="" method="post">
                         <div class="card card-cuenta mt-5 pb-2">
                             <div class="card-body datos-personales ">
                                 <div class="pl-2 pr-2">
@@ -40,50 +49,46 @@
                                             <h5 class="text-red2">Características del parqueadero</h5>
                                             <p class="pt-4 m-0"><b>Tipo de parqueadero</b></p>
                                             <div class="form-check form-check-inline check-red-rounded pt-3">
-                                                <input class="form-check-input" type="checkbox" id="publico" value="option1">
-                                                <label class="form-check-label" for="publico"><img src="./assets/img/cuenta/parking-icon-p.svg"> Público</label>
+                                                <input class="form-check-input" name="tipoparqueadero" type="radio" id="publico" value="option1">
+                                                <label class="form-check-label d-flex align-items-center" for="publico"><img src="./assets/img/cuenta/parking-icon-p.svg" class="pr-1"> Público</label>
                                             </div>
                                             <div class="form-check form-check-inline check-red-rounded pt-3">
-                                                <input class="form-check-input" type="checkbox" id="privado" value="option1">
-                                                <label class="form-check-label" for="privado"><img src="./assets/img/cuenta/parking-icon-p.svg"> Privado</label>
+                                                <input class="form-check-input" name="tipoparqueadero" type="radio" id="privado" value="option1">
+                                                <label class="form-check-label d-flex align-items-center" for="privado"><img class="pr-1" src="./assets/img/cuenta/car-left.svg"> Privado</label>
                                             </div>
                                             <p class="pt-4 m-0"><b>Tipo de reserva</b></p>
                                             <div class="form-check form-check-inline check-red-rounded pt-3">
-                                                <input class="form-check-input" type="checkbox" id="horas" value="option1">
-                                                <label class="form-check-label" for="horas"><img src="./assets/img/cuenta/parking-icon-p.svg"> Horas</label>
+                                                <input class="form-check-input" type="radio" name="tiporeserva" id="dias" value="option1">
+                                                <label class="form-check-label d-flex align-items-center" for="dias"><img class="pr-1" src="./assets/img/cuenta/dias.png"> Días</label>
                                             </div>
                                             <div class="form-check form-check-inline check-red-rounded pt-3">
-                                                <input class="form-check-input" type="checkbox" id="dias" value="option1">
-                                                <label class="form-check-label" for="dias"><img src="./assets/img/cuenta/parking-icon-p.svg"> Días</label>
-                                            </div>
-                                            <div class="form-check form-check-inline check-red-rounded pt-3">
-                                                <input class="form-check-input" type="checkbox" id="meses" value="option1">
-                                                <label class="form-check-label" for="meses"><img src="./assets/img/cuenta/parking-icon-p.svg"> Meses</label>
+                                                <input class="form-check-input" type="radio" name="tiporeserva" id="meses" value="option1">
+                                                <label class="form-check-label d-flex align-items-center" for="meses"><img class="pr-1" src="./assets/img/cuenta/meses.png"> Meses</label>
                                             </div>
                                             <p class="pt-4 m-0"><b>Comodidades</b></p>
                                             <div class="form-check form-check-inline check-red-rounded pt-3">
                                                 <input class="form-check-input" type="checkbox" id="rampas" value="option1">
-                                                <label class="form-check-label" for="rampas"><img src="./assets/img/cuenta/parking-icon-p.svg"> Rampas de acceso</label>
+                                                <label class="form-check-label d-flex align-items-center" for="rampas"><img class="pr-1" src="./assets/img/cuenta/silla-de-ruedas.png"> Rampas de acceso</label>
                                             </div>
                                             <div class="form-check form-check-inline check-red-rounded pt-3">
                                                 <input class="form-check-input" type="checkbox" id="cubierto" value="option1">
-                                                <label class="form-check-label" for="cubierto"><img src="./assets/img/cuenta/parking-icon-p.svg"> Cubierto</label>
+                                                <label class="form-check-label d-flex align-items-center" for="cubierto"><img class="pr-1" src="./assets/img/cuenta/cover.svg"> Cubierto</label>
                                             </div>
                                             <div class="form-check form-check-inline check-red-rounded pt-3">
                                                 <input class="form-check-input" type="checkbox" id="pavimento" value="option1">
-                                                <label class="form-check-label" for="pavimento"><img src="./assets/img/cuenta/parking-icon-p.svg"> Pavimentado</label>
+                                                <label class="form-check-label d-flex align-items-center" for="pavimento"><img class="pr-1" src="./assets/img/cuenta/pavimento.png"> Pavimentado</label>
                                             </div>
                                             <div class="form-check form-check-inline check-red-rounded pt-3">
                                                 <input class="form-check-input" type="checkbox" id="circuito" value="option1">
-                                                <label class="form-check-label" for="circuito"><img src="./assets/img/cuenta/parking-icon-p.svg"> Circuito cerrado</label>
+                                                <label class="form-check-label d-flex align-items-center" for="circuito"><img class="pr-1" src="./assets/img/cuenta/videocamara.png"> Circuito cerrado</label>
                                             </div>
                                             <div class="form-check form-check-inline check-red-rounded pt-3">
                                                 <input class="form-check-input" type="checkbox" id="valet" value="option1">
-                                                <label class="form-check-label" for="valet"><img src="./assets/img/cuenta/parking-icon-p.svg"> Valet parking</label>
+                                                <label class="form-check-label d-flex align-items-center" for="valet"><img class="pr-1" src="./assets/img/cuenta/valet.png"> Valet parking</label>
                                             </div>
                                             <div class="form-check form-check-inline check-red-rounded pt-3">
                                                 <input class="form-check-input" type="checkbox" id="vigilancia" value="option1">
-                                                <label class="form-check-label" for="vigilancia"><img src="./assets/img/cuenta/parking-icon-p.svg"> Vigilancia</label>
+                                                <label class="form-check-label d-flex align-items-center" for="vigilancia"><img class="pr-1" src="./assets/img/cuenta/escudo.png"> Vigilancia</label>
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
@@ -105,6 +110,7 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="anclas" id="disponibilidad"></div>
                         <div class="card card-cuenta mt-5">
                             <div class="card-body datos-personales">
                                 <div class="pl-2 pr-2">
@@ -118,7 +124,7 @@
                                         <div class="col">
                                             <div class="form-check form-check-inline check-red-rounded pt-3">
                                                 <input class="form-check-input" type="checkbox" id="disponibilidad247" value="option1">
-                                                <label class="form-check-label" for="disponibilidad247"><img src="./assets/img/cuenta/parking-icon-p.svg"> Disponibilidad 24/7</label>
+                                                <label class="form-check-label d-flex align-items-center" for="disponibilidad247"><img class="pr-1" src="./assets/img/cuenta/disponibilidad.png"> Disponibilidad 24/7</label>
                                             </div>
                                         </div>
                                         <div class="col">
@@ -257,6 +263,7 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="anclas" id="vehiculos"></div>
                         <div class="card card-cuenta mt-5">
                             <div class="card-body datos-personales">
                                 <div class="pl-2 pr-2">
@@ -267,13 +274,24 @@
                                         </li>
                                     </ul>
                                     <div class="form-row pt-1">
-                                        <div class="col">
-                                            <div class="form-check form-check-inline check-red-rounded ">
-                                                <input class="form-check-input" type="checkbox" id="car1" value="option1">
-                                                <label class="form-check-label" for="car1"><img src="./assets/img/cuenta/parking-icon-p.svg"> Vigilancia</label>
+                                        <div class="col-3">
+                                            <div class="check-red-rounded">
+                                                <div class="form-group">
+                                                    <input class="form-check-input" type="radio" id="sedan" name="inlineRadioOptions" value="option1" checked>
+                                                    <label class="form-check-label" for="sedan">
+                                                        <div class="media">
+                                                            <img src="./assets/img/filters/sedanPNG.png" class="align-self-center">
+                                                            <div class="media-body text-left">
+                                                                <h5 class="mt-0 text-black-gray text-font15 m-0">Sedan</h5>
+                                                                <p class="m-0 text-font9">Alto: menos de 1.90m</p>
+                                                                <p class="m-0 text-font9">Largo: menos de 5m</p>
+                                                            </div>
+                                                        </div>
+                                                    </label>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="col">
+                                        <div class="col-3">
                                             <div class="input-gray form-control-custom1">
                                                 <select class="form-control" id="car1-cupos" required>
                                                     <option>0</option>
@@ -282,19 +300,19 @@
                                                 <label for="car1-cupos">NÚMERO DE CUPOS</label>
                                             </div>
                                         </div>
-                                        <div class="col">
+                                        <!-- <div class="col">
                                             <div class="input-gray form-control-custom1">
                                                 <input type="number" class="form-control" id="car1-hora" required>
                                                 <label for="car1-hora">VALOR HORA</label>
                                             </div>
-                                        </div>
-                                        <div class="col">
+                                        </div> -->
+                                        <div class="col-3">
                                             <div class="input-gray form-control-custom1">
                                                 <input type="number" class="form-control" id="car1-dia" required>
                                                 <label for="car1-dia">VALOR DÍA</label>
                                             </div>
                                         </div>
-                                        <div class="col">
+                                        <div class="col-3">
                                             <div class="input-gray form-control-custom1">
                                                 <input type="number" class="form-control" id="car1-mes" required>
                                                 <label for="car1-mes">MENSUALIDAD</label>
@@ -303,9 +321,20 @@
                                     </div>
                                     <div class="form-row pt-1">
                                         <div class="col">
-                                            <div class="form-check form-check-inline check-red-rounded ">
-                                                <input class="form-check-input" type="checkbox" id="car2" value="option1">
-                                                <label class="form-check-label" for="car2"><img src="./assets/img/cuenta/parking-icon-p.svg"> Vigilancia</label>
+                                            <div class="check-red-rounded">
+                                                <div class="form-group">
+                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="taxi" value="option1">
+                                                    <label class="form-check-label" for="taxi">
+                                                        <div class="media">
+                                                            <img src="./assets/img/filters/taxiPNG.png" class="align-self-center">
+                                                            <div class="media-body text-left">
+                                                                <h5 class="mt-0 text-black-gray text-font15 m-0">Taxí</h5>
+                                                                <p class="m-0 text-font9">Alto: menos de 1.90m</p>
+                                                                <p class="m-0 text-font9">Largo: menos de 5m</p>
+                                                            </div>
+                                                        </div>
+                                                    </label>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="col">
@@ -317,12 +346,12 @@
                                                 <label for="car2-cupos">NÚMERO DE CUPOS</label>
                                             </div>
                                         </div>
-                                        <div class="col">
+                                        <!-- <div class="col">
                                             <div class="input-gray form-control-custom1">
                                                 <input type="number" class="form-control" id="car2-hora" required>
                                                 <label for="car2-hora">VALOR HORA</label>
                                             </div>
-                                        </div>
+                                        </div> -->
                                         <div class="col">
                                             <div class="input-gray form-control-custom1">
                                                 <input type="number" class="form-control" id="car2-dia" required>
@@ -338,9 +367,20 @@
                                     </div>
                                     <div class="form-row pt-1">
                                         <div class="col">
-                                            <div class="form-check form-check-inline check-red-rounded ">
-                                                <input class="form-check-input" type="checkbox" id="car3" value="option1">
-                                                <label class="form-check-label" for="car3"><img src="./assets/img/cuenta/parking-icon-p.svg"> Vigilancia</label>
+                                            <div class="check-red-rounded">
+                                                <div class="form-group">
+                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="camion" value="option1">
+                                                    <label class="form-check-label" for="camion">
+                                                        <div class="media">
+                                                            <img src="./assets/img/filters/camionPNG.png" class="align-self-center">
+                                                            <div class="media-body text-left">
+                                                                <h5 class="mt-0 text-black-gray text-font15 m-0">Camion</h5>
+                                                                <p class="m-0 text-font9">Alto: menos de 1.90m</p>
+                                                                <p class="m-0 text-font9">Largo: menos de 5m</p>
+                                                            </div>
+                                                        </div>
+                                                    </label>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="col">
@@ -352,12 +392,12 @@
                                                 <label for="car3-cupos">NÚMERO DE CUPOS</label>
                                             </div>
                                         </div>
-                                        <div class="col">
+                                        <!-- <div class="col">
                                             <div class="input-gray form-control-custom1">
                                                 <input type="number" class="form-control" id="car3-hora" required>
                                                 <label for="car3-hora">VALOR HORA</label>
                                             </div>
-                                        </div>
+                                        </div> -->
                                         <div class="col">
                                             <div class="input-gray form-control-custom1">
                                                 <input type="number" class="form-control" id="car3-dia" required>
@@ -373,9 +413,20 @@
                                     </div>
                                     <div class="form-row pt-1">
                                         <div class="col">
-                                            <div class="form-check form-check-inline check-red-rounded ">
-                                                <input class="form-check-input" type="checkbox" id="car4" value="option1">
-                                                <label class="form-check-label" for="car4"><img src="./assets/img/cuenta/parking-icon-p.svg"> Vigilancia</label>
+                                            <div class="check-red-rounded ">
+                                                <div class="form-group">
+                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="motocicleta" value="option1">
+                                                    <label class="form-check-label" for="motocicleta">
+                                                        <div class="media">
+                                                            <img src="./assets/img/filters/motoPNG.png" class="align-self-center">
+                                                            <div class="media-body text-left">
+                                                                <h5 class="mt-0 text-black-gray text-font15 m-0">Moto</h5>
+                                                                <p class="m-0 text-font9">Alto: menos de 1.90m</p>
+                                                                <p class="m-0 text-font9">Largo: menos de 5m</p>
+                                                            </div>
+                                                        </div>
+                                                    </label>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="col">
@@ -387,12 +438,12 @@
                                                 <label for="car4-cupos">NÚMERO DE CUPOS</label>
                                             </div>
                                         </div>
-                                        <div class="col">
+                                        <!-- <div class="col">
                                             <div class="input-gray form-control-custom1">
                                                 <input type="number" class="form-control" id="car4-hora" required>
                                                 <label for="car4-hora">VALOR HORA</label>
                                             </div>
-                                        </div>
+                                        </div> -->
                                         <div class="col">
                                             <div class="input-gray form-control-custom1">
                                                 <input type="number" class="form-control" id="car4-dia" required>
@@ -408,9 +459,20 @@
                                     </div>
                                     <div class="form-row pt-1">
                                         <div class="col">
-                                            <div class="form-check form-check-inline check-red-rounded ">
-                                                <input class="form-check-input" type="checkbox" id="car5" value="option1">
-                                                <label class="form-check-label" for="car5"><img src="./assets/img/cuenta/parking-icon-p.svg"> Vigilancia</label>
+                                            <div class="check-red-rounded">
+                                                <div class="form-group">
+                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="bicicleta" value="option1">
+                                                    <label class="form-check-label" for="bicicleta">
+                                                        <div class="media">
+                                                            <img src="./assets/img/filters/biciPNG.png" class="align-self-center">
+                                                            <div class="media-body text-left">
+                                                                <h5 class="mt-0 text-black-gray text-font15 m-0">Bicicleta</h5>
+                                                                <p class="m-0 text-font9">Alto: menos de 1.90m</p>
+                                                                <p class="m-0 text-font9">Largo: menos de 5m</p>
+                                                            </div>
+                                                        </div>
+                                                    </label>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="col">
@@ -422,12 +484,12 @@
                                                 <label for="car5-cupos">NÚMERO DE CUPOS</label>
                                             </div>
                                         </div>
-                                        <div class="col">
+                                        <!-- <div class="col">
                                             <div class="input-gray form-control-custom1">
                                                 <input type="number" class="form-control" id="car5-hora" required>
                                                 <label for="car5-hora">VALOR HORA</label>
                                             </div>
-                                        </div>
+                                        </div> -->
                                         <div class="col">
                                             <div class="input-gray form-control-custom1">
                                                 <input type="number" class="form-control" id="car5-dia" required>
@@ -443,9 +505,20 @@
                                     </div>
                                     <div class="form-row pt-1">
                                         <div class="col">
-                                            <div class="form-check form-check-inline check-red-rounded ">
-                                                <input class="form-check-input" type="checkbox" id="car6" value="option1">
-                                                <label class="form-check-label" for="car6"><img src="./assets/img/cuenta/parking-icon-p.svg"> Vigilancia</label>
+                                            <div class="check-red-rounded">
+                                                <div class="form-group">
+                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="camioneta" value="option1">
+                                                    <label class="form-check-label" for="camioneta">
+                                                        <div class="media">
+                                                            <img src="./assets/img/filters/camionetaPNG.png" class="align-self-center">
+                                                            <div class="media-body text-left">
+                                                                <h5 class="mt-0 text-black-gray text-font15 m-0">Camioneta</h5>
+                                                                <p class="m-0 text-font9">Alto: menos de 1.90m</p>
+                                                                <p class="m-0 text-font9">Largo: menos de 5m</p>
+                                                            </div>
+                                                        </div>
+                                                    </label>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="col">
@@ -457,12 +530,12 @@
                                                 <label for="car6-cupos">NÚMERO DE CUPOS</label>
                                             </div>
                                         </div>
-                                        <div class="col">
+                                        <!-- <div class="col">
                                             <div class="input-gray form-control-custom1">
                                                 <input type="number" class="form-control" id="car6-hora" required>
                                                 <label for="car6-hora">VALOR HORA</label>
                                             </div>
-                                        </div>
+                                        </div> -->
                                         <div class="col">
                                             <div class="input-gray form-control-custom1">
                                                 <input type="number" class="form-control" id="car6-dia" required>
@@ -478,9 +551,20 @@
                                     </div>
                                     <div class="form-row pt-1">
                                         <div class="col">
-                                            <div class="form-check form-check-inline check-red-rounded ">
-                                                <input class="form-check-input" type="checkbox" id="car7" value="option1">
-                                                <label class="form-check-label" for="car7"><img src="./assets/img/cuenta/parking-icon-p.svg"> Vigilancia</label>
+                                            <div class="check-red-rounded">
+                                                <div class="form-group">
+                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="bus" value="option1">
+                                                    <label class="form-check-label" for="bus">
+                                                        <div class="media">
+                                                            <img src="./assets/img/filters/busPNG.png" class="align-self-center">
+                                                            <div class="media-body text-left">
+                                                                <h5 class="mt-0 text-black-gray text-font15 m-0">Bus</h5>
+                                                                <p class="m-0 text-font9">Alto: menos de 1.90m</p>
+                                                                <p class="m-0 text-font9">Largo: menos de 5m</p>
+                                                            </div>
+                                                        </div>
+                                                    </label>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="col">
@@ -492,12 +576,12 @@
                                                 <label for="car7-cupos">NÚMERO DE CUPOS</label>
                                             </div>
                                         </div>
-                                        <div class="col">
+                                        <!-- <div class="col">
                                             <div class="input-gray form-control-custom1">
                                                 <input type="number" class="form-control" id="car7-hora" required>
                                                 <label for="car7-hora">VALOR HORA</label>
                                             </div>
-                                        </div>
+                                        </div> -->
                                         <div class="col">
                                             <div class="input-gray form-control-custom1">
                                                 <input type="number" class="form-control" id="car7-dia" required>
@@ -515,6 +599,7 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="anclas" id="descripcion"></div>
                         <div class="card card-cuenta mt-5">
                             <div class="card-body datos-personales">
                                 <div class="pl-2 pr-2">
@@ -534,6 +619,7 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="anclas" id="galeria"></div>
                         <div class="card card-cuenta mt-5">
                             <div class="card-body datos-personales">
                                 <div class="pl-2 pr-2">

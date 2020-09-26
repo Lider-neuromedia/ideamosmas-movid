@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="78px" height="47px" viewBox="0 0 78 47" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>etiqueta_promo</title>
+    <defs>
+        <linearGradient x1="83.7655908%" y1="31.8458251%" x2="-84.69109%" y2="89.4974725%" id="linearGradient-1">
+            <stop stop-color="#EB4555" offset="0%"></stop>
+            <stop stop-color="#F4172C" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="etiqueta_promo" transform="translate(0.000000, -0.000000)">
+            <polygon id="Rectangle" fill="url(#linearGradient-1)" points="4.05925293e-16 28 49.6030534 0 78 0 0 47"></polygon>
+            <text id="PROMO" transform="translate(30.000000, 19.500000) rotate(-31.000000) translate(-30.000000, -19.500000) " font-family="Quicksand-Bold, Quicksand" font-size="9" font-weight="bold" letter-spacing="1.3525002" fill="#FFFFFF">
+                <tspan x="10.1937495" y="23">PROMO</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

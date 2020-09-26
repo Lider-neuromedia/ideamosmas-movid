@@ -1,0 +1,55 @@
+#filters-advanced {
+    width: 310px;
+    position: fixed;
+    top: 6.5em;
+    left: 520px;
+    z-index: 999;
+    background: rgb(244, 245, 240);
+    color: rgb(255, 255, 255);
+    transition: all 0.3s ease 0s;
+}
+
+#filters-advanced {
+    border-left: 1px solid #D8D8D8;
+}
+
+#filters-advanced .form-group input[type="checkbox"],
+#filters-advanced .form-group input[type="radio"] {
+    display: none;
+}
+
+#filters-advanced label:hover {
+    cursor: pointer;
+}
+
+#filters-advanced input[type="range"] {
+    height: 3px;
+}
+
+#filters-advanced .results,
+#filters-advanced .erase {
+    border-radius: 8px;
+}
+
+#filters-advanced .results {
+    background: #EB4555;
+    border: 1px solid #EB4555;
+    color: #fff;
+    transition: .5s;
+}
+
+#filters-advanced .results:hover {
+    background-color: #fff;
+    color: #EB4555;
+}
+
+#filters-advanced .erase {
+    background: transparent;
+    color: #BABABA;
+    border: 1px solid #E0E3E5;
+}
+
+#filters-advanced .container-result {
+    background-color: #F4F5F0;
+    box-shadow: 2px 0px 2px 1px rgba(0, 0, 0, .5);
+}
